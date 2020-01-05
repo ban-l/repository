@@ -1,0 +1,245 @@
+SELECT
+	`sie_contract_change_t`.`id` AS `id`,
+	`sie_contract_change_t`.`serial_num` AS `serial_num`,
+	`sie_contract_change_t`.`user_id` AS `user_id`,
+	`sie_contract_change_t`.`zh_name` AS `zh_name`,
+	`sie_contract_change_t`.`org_name` AS `org_name`,
+	`sie_contract_change_t`.`customer_manager` AS `customer_manager`,
+	`sie_contract_change_t`.`sale_area` AS `sale_area`,
+	`sie_contract_change_t`.`contract_num` AS `contract_num`,
+	`sie_contract_change_t`.`pre_sale_po_code` AS `pre_sale_po_code`,
+	`sie_contract_change_t`.`pre_sale_owner` AS `pre_sale_owner`,
+	`sie_contract_change_t`.`bid_num` AS `bid_num`,
+	`sie_contract_change_t`.`delivery_org_name` AS `delivery_org_name`,
+	`sie_contract_change_t`.`pre_sale_po_name` AS `pre_sale_po_name`,
+	`sie_contract_change_t`.`product_type` AS `product_type`,
+	`sie_contract_change_t`.`contract_name` AS `contract_name`,
+	`sie_contract_change_t`.`customer_code` AS `customer_code`,
+	`sie_contract_change_t`.`customer_name` AS `customer_name`,
+	`sie_contract_change_t`.`customer_bill_addr` AS `customer_bill_addr`,
+	`sie_contract_change_t`.`currency` AS `currency`,
+	`sie_contract_change_t`.`contract_entity` AS `contract_entity`,
+	`sie_contract_change_t`.`sale_category` AS `sale_category`,
+	`sie_contract_change_t`.`is_sh_external` AS `is_sh_external`,
+	`sie_contract_change_t`.`frame_agreement_num` AS `frame_agreement_num`,
+	`sie_contract_change_t`.`maintenance_period` AS `maintenance_period`,
+	`sie_contract_change_t`.`sh_company` AS `sh_company`,
+	`sie_contract_change_t`.`impl_dev_amount` AS `impl_dev_amount`,
+	`sie_contract_change_t`.`impl_bu_quote` AS `impl_bu_quote`,
+	`sie_contract_change_t`.`impl_invoice_tax_rate` AS `impl_invoice_tax_rate`,
+	`sie_contract_change_t`.`oper_amount` AS `oper_amount`,
+	`sie_contract_change_t`.`oper_bu_quote` AS `oper_bu_quote`,
+	`sie_contract_change_t`.`oper_invoice_tax_rate` AS `oper_invoice_tax_rate`,
+	`sie_contract_change_t`.`self_soft_amount` AS `self_soft_amount`,
+	`sie_contract_change_t`.`self_bu_quote` AS `self_bu_quote`,
+	`sie_contract_change_t`.`self_invoice_tax_rate` AS `self_invoice_tax_rate`,
+	`sie_contract_change_t`.`out_soft_amount` AS `out_soft_amount`,
+	`sie_contract_change_t`.`out_purchase_cost` AS `out_purchase_cost`,
+	`sie_contract_change_t`.`out_invoice_tax_rate` AS `out_invoice_tax_rate`,
+	`sie_contract_change_t`.`hard_amount` AS `hard_amount`,
+	`sie_contract_change_t`.`hard_purchase_cost` AS `hard_purchase_cost`,
+	`sie_contract_change_t`.`hard_invoice_tax_rate` AS `hard_invoice_tax_rate`,
+	`sie_contract_change_t`.`resource_amount` AS `resource_amount`,
+	`sie_contract_change_t`.`resource_purchase_cost` AS `resource_purchase_cost`,
+	`sie_contract_change_t`.`resource_invoice_tax_rate` AS `resource_invoice_tax_rate`,
+	`sie_contract_change_t`.`is_back_to_back` AS `is_back_to_back`,
+	`sie_contract_change_t`.`dist_amount` AS `dist_amount`,
+	`sie_contract_change_t`.`predict_dist_total_cost` AS `predict_dist_total_cost`,
+	`sie_contract_change_t`.`predict_dist_gp` AS `predict_dist_gp`,
+	`sie_contract_change_t`.`contract_total_day` AS `contract_total_day`,
+	`sie_contract_change_t`.`standard_person_unit_price` AS `standard_person_unit_price`,
+	`sie_contract_change_t`.`predict_hard_soft_gp` AS `predict_hard_soft_gp`,
+	`sie_contract_change_t`.`contract_total_amount` AS `contract_total_amount`,
+	`sie_contract_change_t`.`wf_state` AS `wf_state`,
+	`opinion`.`risk_person_type` AS `risk_person_type`,
+	`opinion`.`risk_person_value` AS `risk_person_value`,
+	`opinion`.`risk_sup_description` AS `risk_sup_description`,
+	`abstract`.`intellectual_property` AS `intellectual_property`,
+	`sie_contract_change_t`.`is_lock` AS `is_lock`,
+	`sie_contract_change_t`.`extra` AS `extra`,
+	`sie_contract_change_t`.`tmp_uuid` AS `tmp_uuid`,
+	`sie_contract_change_t`.`data_state` AS `data_state`,
+	`sie_contract_change_t`.`old_data` AS `old_data`,
+	`sie_contract_change_t`.`created_by` AS `created_by`,
+	`sie_contract_change_t`.`created_date` AS `created_date`,
+	`sie_contract_change_t`.`last_modified_by` AS `last_modified_by`,
+	`sie_contract_change_t`.`last_modified_date` AS `last_modified_date` 
+FROM
+	((
+			`sie_contract_change_t`
+			LEFT JOIN `sie_contract_change_opinion_t` `opinion` ON ((
+					`sie_contract_change_t`.`serial_num` = `opinion`.`serial_num` 
+				)))
+		LEFT JOIN `sie_contract_change_abstract_t` `abstract` ON ((
+				`sie_contract_change_t`.`serial_num` = `abstract`.`serial_num` 
+			))) 
+WHERE
+	((
+			`sie_contract_change_t`.`data_state` = '1' 
+			) 
+		AND ( `opinion`.`data_state` = '1' ) 
+	AND ( `abstract`.`data_state` = '1' )) UNION ALL
+SELECT
+	`sie_sale_contract_t`.`id` AS `id`,
+	`sie_sale_contract_t`.`serial_num` AS `serial_num`,
+	`sie_sale_contract_t`.`user_id` AS `user_id`,
+	`sie_sale_contract_t`.`zh_name` AS `zh_name`,
+	`sie_sale_contract_t`.`org_name` AS `org_name`,
+	`sie_sale_contract_t`.`customer_manager` AS `customer_manager`,
+	`sie_sale_contract_t`.`sale_area` AS `sale_area`,
+	'' AS `contract_num`,
+	`sie_sale_contract_t`.`pre_sale_po_code` AS `pre_sale_po_code`,
+	`sie_sale_contract_t`.`pre_sale_owner` AS `pre_sale_owner`,
+	`sie_sale_contract_t`.`bid_num` AS `bid_num`,
+	`sie_sale_contract_t`.`delivery_org_name` AS `delivery_org_name`,
+	`sie_sale_contract_t`.`pre_sale_po_name` AS `pre_sale_po_name`,
+	`sie_sale_contract_t`.`product_type` AS `product_type`,
+	`sie_sale_contract_t`.`contract_name` AS `contract_name`,
+	`sie_sale_contract_t`.`customer_code` AS `customer_code`,
+	`sie_sale_contract_t`.`customer_name` AS `customer_name`,
+	`sie_sale_contract_t`.`customer_bill_addr` AS `customer_bill_addr`,
+	`sie_sale_contract_t`.`currency` AS `currency`,
+	`sie_sale_contract_t`.`contract_entity` AS `contract_entity`,
+	`sie_sale_contract_t`.`sale_category` AS `sale_category`,
+	`sie_sale_contract_t`.`is_sh_external` AS `is_sh_external`,
+	`sie_sale_contract_t`.`frame_agreement_num` AS `frame_agreement_num`,
+	`sie_sale_contract_t`.`maintenance_period` AS `maintenance_period`,
+	`sie_sale_contract_t`.`sh_company` AS `sh_company`,
+	`sie_sale_contract_t`.`impl_dev_amount` AS `impl_dev_amount`,
+	`sie_sale_contract_t`.`impl_bu_quote` AS `impl_bu_quote`,
+	`sie_sale_contract_t`.`impl_invoice_tax_rate` AS `impl_invoice_tax_rate`,
+	`sie_sale_contract_t`.`oper_amount` AS `oper_amount`,
+	`sie_sale_contract_t`.`oper_bu_quote` AS `oper_bu_quote`,
+	`sie_sale_contract_t`.`oper_invoice_tax_rate` AS `oper_invoice_tax_rate`,
+	`sie_sale_contract_t`.`self_soft_amount` AS `self_soft_amount`,
+	`sie_sale_contract_t`.`self_bu_quote` AS `self_bu_quote`,
+	`sie_sale_contract_t`.`self_invoice_tax_rate` AS `self_invoice_tax_rate`,
+	`sie_sale_contract_t`.`out_soft_amount` AS `out_soft_amount`,
+	`sie_sale_contract_t`.`out_purchase_cost` AS `out_purchase_cost`,
+	`sie_sale_contract_t`.`out_invoice_tax_rate` AS `out_invoice_tax_rate`,
+	`sie_sale_contract_t`.`hard_amount` AS `hard_amount`,
+	`sie_sale_contract_t`.`hard_purchase_cost` AS `hard_purchase_cost`,
+	`sie_sale_contract_t`.`hard_invoice_tax_rate` AS `hard_invoice_tax_rate`,
+	`sie_sale_contract_t`.`resource_amount` AS `resource_amount`,
+	`sie_sale_contract_t`.`resource_purchase_cost` AS `resource_purchase_cost`,
+	`sie_sale_contract_t`.`resource_invoice_tax_rate` AS `resource_invoice_tax_rate`,
+	`sie_sale_contract_t`.`is_back_to_back` AS `is_back_to_back`,
+	`sie_sale_contract_t`.`dist_amount` AS `dist_amount`,
+	`sie_sale_contract_t`.`predict_dist_total_cost` AS `predict_dist_total_cost`,
+	`sie_sale_contract_t`.`predict_dist_gp` AS `predict_dist_gp`,
+	`sie_sale_contract_t`.`contract_total_day` AS `contract_total_day`,
+	`sie_sale_contract_t`.`standard_person_unit_price` AS `standard_person_unit_price`,
+	`sie_sale_contract_t`.`predict_hard_soft_gp` AS `predict_hard_soft_gp`,
+	`sie_sale_contract_t`.`contract_total_amount` AS `contract_total_amount`,
+	`sie_sale_contract_t`.`wf_state` AS `wf_state`,
+	`opinion`.`risk_person_type` AS `risk_person_type`,
+	`opinion`.`risk_person_value` AS `risk_person_value`,
+	`opinion`.`risk_sup_description` AS `risk_sup_description`,
+	`abstract`.`intellectual_property` AS `intellectual_property`,
+	`sie_sale_contract_t`.`is_lock` AS `is_lock`,
+	`sie_sale_contract_t`.`extra` AS `extra`,
+	`sie_sale_contract_t`.`tmp_uuid` AS `tmp_uuid`,
+	`sie_sale_contract_t`.`data_state` AS `data_state`,
+	`sie_sale_contract_t`.`old_data` AS `old_data`,
+	`sie_sale_contract_t`.`created_by` AS `created_by`,
+	`sie_sale_contract_t`.`created_date` AS `created_date`,
+	`sie_sale_contract_t`.`last_modified_by` AS `last_modified_by`,
+	`sie_sale_contract_t`.`last_modified_date` AS `last_modified_date` 
+FROM
+	((
+			`sie_sale_contract_t`
+			LEFT JOIN `sie_sale_contract_opinion_t` `opinion` ON ((
+					`sie_sale_contract_t`.`serial_num` = `opinion`.`serial_num` 
+				)))
+		LEFT JOIN `sie_sale_contract_abstract_t` `abstract` ON ((
+				`sie_sale_contract_t`.`serial_num` = `abstract`.`serial_num` 
+			))) 
+WHERE
+	((
+			`sie_sale_contract_t`.`data_state` = '1' 
+			) 
+		AND ( `opinion`.`data_state` = '1' ) 
+		AND ( `abstract`.`data_state` = '1' ) 
+		AND (
+			NOT (
+				`sie_sale_contract_t`.`serial_num` IN (
+				SELECT
+					`scc`.`contract_num` 
+				FROM
+					`sie_contract_change_t` `scc` 
+				WHERE
+					((
+							`scc`.`data_state` = '1' 
+							) 
+					AND ( `scc`.`contract_num` IS NOT NULL )))))) UNION ALL
+SELECT
+	`sie_pre_contract_t`.`id` AS `id`,
+	`sie_pre_contract_t`.`serial_num` AS `serial_num`,
+	`sie_pre_contract_t`.`user_id` AS `user_id`,
+	`sie_pre_contract_t`.`zh_name` AS `zh_name`,
+	`sie_pre_contract_t`.`org_name` AS `org_name`,
+	`sie_pre_contract_t`.`customer_manager` AS `customer_manager`,
+	`sie_pre_contract_t`.`sale_area` AS `sale_area`,
+	'' AS `contract_num`,
+	`sie_pre_contract_t`.`pre_sale_po_code` AS `pre_sale_po_code`,
+	`sie_pre_contract_t`.`pre_sale_owner` AS `pre_sale_owner`,
+	`sie_pre_contract_t`.`bid_num` AS `bid_num`,
+	`sie_pre_contract_t`.`delivery_org_name` AS `delivery_org_name`,
+	`sie_pre_contract_t`.`pre_sale_po_name` AS `pre_sale_po_name`,
+	`sie_pre_contract_t`.`product_type` AS `product_type`,
+	`sie_pre_contract_t`.`contract_name` AS `contract_name`,
+	`sie_pre_contract_t`.`customer_code` AS `customer_code`,
+	`sie_pre_contract_t`.`customer_name` AS `customer_name`,
+	`sie_pre_contract_t`.`customer_bill_addr` AS `customer_bill_addr`,
+	`sie_pre_contract_t`.`currency` AS `currency`,
+	`sie_pre_contract_t`.`contract_entity` AS `contract_entity`,
+	`sie_pre_contract_t`.`sale_category` AS `sale_category`,
+	`sie_pre_contract_t`.`is_sh_external` AS `is_sh_external`,
+	'' AS `frame_agreement_num`,
+	`sie_pre_contract_t`.`maintenance_period` AS `maintenance_period`,
+	`sie_pre_contract_t`.`sh_company` AS `sh_company`,
+	`sie_pre_contract_t`.`impl_dev_amount` AS `impl_dev_amount`,
+	`sie_pre_contract_t`.`impl_bu_quote` AS `impl_bu_quote`,
+	`sie_pre_contract_t`.`impl_invoice_tax_rate` AS `impl_invoice_tax_rate`,
+	`sie_pre_contract_t`.`oper_amount` AS `oper_amount`,
+	`sie_pre_contract_t`.`oper_bu_quote` AS `oper_bu_quote`,
+	`sie_pre_contract_t`.`oper_invoice_tax_rate` AS `oper_invoice_tax_rate`,
+	`sie_pre_contract_t`.`self_amount` AS `self_soft_amount`,
+	`sie_pre_contract_t`.`self_bu_quote` AS `self_bu_quote`,
+	`sie_pre_contract_t`.`self_invoice_tax_rate` AS `self_invoice_tax_rate`,
+	`sie_pre_contract_t`.`out_amount` AS `out_soft_amount`,
+	`sie_pre_contract_t`.`out_purchase_cost` AS `out_purchase_cost`,
+	`sie_pre_contract_t`.`out_invoice_tax_rate` AS `out_invoice_tax_rate`,
+	`sie_pre_contract_t`.`hard_amount` AS `hard_amount`,
+	`sie_pre_contract_t`.`hard_purchase_cost` AS `hard_purchase_cost`,
+	`sie_pre_contract_t`.`hard_invoice_tax_rate` AS `hard_invoice_tax_rate`,
+	`sie_pre_contract_t`.`resource_amount` AS `resource_amount`,
+	`sie_pre_contract_t`.`resource_purchase_cost` AS `resource_purchase_cost`,
+	`sie_pre_contract_t`.`resource_invoice_tax_rate` AS `resource_invoice_tax_rate`,
+	`sie_pre_contract_t`.`is_back_to_back` AS `is_back_to_back`,
+	`sie_pre_contract_t`.`dist_amount` AS `dist_amount`,
+	`sie_pre_contract_t`.`predict_dist_total_amount` AS `predict_dist_total_cost`,
+	`sie_pre_contract_t`.`predict_dist_gp` AS `predict_dist_gp`,
+	`sie_pre_contract_t`.`contract_total_day` AS `contract_total_day`,
+	`sie_pre_contract_t`.`standard_person_unit_price` AS `standard_person_unit_price`,
+	`sie_pre_contract_t`.`predict_hard_soft_gp` AS `predict_hard_soft_gp`,
+	`sie_pre_contract_t`.`contract_total_amount` AS `contract_total_amount`,
+	`sie_pre_contract_t`.`wf_state` AS `wf_state`,
+	'' AS `risk_person_type`,
+	'' AS `risk_person_value`,
+	'' AS `risk_sup_description`,
+	'' AS `intellectual_property`,
+	`sie_pre_contract_t`.`is_lock` AS `is_lock`,
+	`sie_pre_contract_t`.`extra` AS `extra`,
+	`sie_pre_contract_t`.`tmp_uuid` AS `tmp_uuid`,
+	`sie_pre_contract_t`.`data_state` AS `data_state`,
+	`sie_pre_contract_t`.`old_data` AS `old_data`,
+	`sie_pre_contract_t`.`created_by` AS `created_by`,
+	`sie_pre_contract_t`.`created_date` AS `created_date`,
+	`sie_pre_contract_t`.`last_modified_by` AS `last_modified_by`,
+	`sie_pre_contract_t`.`last_modified_date` AS `last_modified_date` 
+FROM
+	`sie_pre_contract_t` 
+WHERE
+	(
+	`sie_pre_contract_t`.`data_state` = '1')

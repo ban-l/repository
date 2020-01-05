@@ -1,0 +1,80 @@
+Url：/api/contract-change-statement/10/0
+请求方式：POST
+参数说明：
+{
+    "serialNum":"",
+    "zhName":"",
+    "wfState":"active,completed",
+    "approvers":"",
+    "customerManager":"",
+    "saleArea":"",
+    "preSalePoCode":"",
+    "preSalePoName":"",
+    "customerCode":"",
+    "customerName":"",
+    "contractName":"",
+    "deliveryOrgName":"",
+    "createdDate":"2010-10-25,2019-11-25",
+    "lastModifiedDate":"",
+    "saleCategory":"实施/外包开发,硬件......"
+}
+参数格式：JSON
+返回数据格式：
+{
+  "errorCode": "0",
+  "errorMsg": "success",
+  "pageSize": 10,
+  "pageNumber": 0,
+  "countSize": 39,
+  "data": [
+    {
+      "serialNum": "HTBGS1912022",
+      "zhName": "陈浩3",
+      "wfState": "completed",
+      "approvers": null,
+      "customerManager": "陈浩3",
+      "saleArea": "40华南销售一部",
+      "preSalePoCode": "01GZ19110557",
+      "preSalePoName": "IT战略框架协议2019",
+      "customerCode": "3W201912075368",
+      "customerName": "广东乐华智能卫浴有限公司",
+      "contractName": "技术服务合同",
+      "deliveryOrgName": "30运维服务部",
+      "createdDate": "2019-12-09 18:53:18",
+      "lastModifiedDate": "2019-12-09 18:53:18",
+      "preSaleOwner": "杨响亮",
+      "customerBillAddr": "佛山市三水区南山镇漫江工业园南区3号",
+      "productType": "EBS HR运维,ORACLE EBS运维",
+      "currency": "人民币",
+      "contractEntity": "广州赛意信息科技股份有限公司",
+      "bidNum": "",
+      "preContractNum": null,
+      "frameAgreementNum": "",
+      "saleCategory": "框架协议",
+      "operAmount": 0.0,
+      "selfSoftAmount": 0.0,
+      "outSoftAmount": 0.0,
+      "hardAmount": 0.0,
+      "resourceAmount": 0.0,
+      "contractTotalAmount": null,
+      "contractTotalDay": 0.0,
+      "standardPersonUnitPrice": 0.0,
+      "distAmount": 0.0,
+      "predictDistTotalCost": 0.0,
+      "predictDistGp": "0.00%",
+      "predictHardSoftGp": "0.00%",
+      "isBackToBack": null,
+      "contractAbstract": "针对箭牌集团人天框架协议......",
+      "recipientName": "",
+      "recipientTel": "18988680717",
+      "recipientAddr": "广东省佛山市南海区箭牌大厦17楼IT办公室",
+      "riskPersonType": "",
+      "accountProjectGp": "30%~35%（合格）",
+      "accountSupDescription": null,
+      "expressNum": null,
+      "stampDate": "2019-12-11 00:00:00",
+      "oldData": "1"
+    },
+	......
+  ]
+}

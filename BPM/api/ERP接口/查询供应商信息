@@ -1,0 +1,29 @@
+Url：/api/saipVendors/bySgAndVd?s1=xx&vn=xx&on=xx&pn=10&ps=10
+请求方式：GET
+参数说明：s1=vendor_code;vn=vendor_name;on=org_name;pn=page_num;ps=page_size;
+参数格式：?xxx=xx&xxx=xx
+返回数据格式：
+{
+  "errorCode": "0",
+  "errorMsg": "success",
+  "pageSize": 10,
+  "pageNumber": 13,
+  "countSize": 157,
+  "data": [
+    {
+      "vendorCode": "G0000002",
+      "vendorName": "甲骨文（中国）软件系统有限公司",
+      "taxpayerId": null,
+      "vendorAddr": "北京",
+      "accountEntryUnit": "广州能量盒子科技有限公司"
+    },
+    {
+      "vendorCode": "G0000013",
+      "vendorName": "广州科谱信息科技有限公司",
+      "taxpayerId": null,
+      "vendorAddr": "广州",
+      "accountEntryUnit": "广州能量盒子科技有限公司"
+    },
+    ......
+  ]
+}

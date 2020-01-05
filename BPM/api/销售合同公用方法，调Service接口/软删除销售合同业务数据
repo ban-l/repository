@@ -1,0 +1,11 @@
+Url：/api/removeSaleContractBySerialNum/{serialNum}/{situation}
+请求方式：GET
+参数说明：/api/removeSaleContractBySerialNum/xxx/xxx ;
+situation为驳回重提交的流转方式，值为cancel时不删除审批意见表数据
+参数格式：JSON
+返回数据格式：
+{
+  "errorCode": "0",
+  "errorMsg": "SUCCESS",
+  "data": null
+}

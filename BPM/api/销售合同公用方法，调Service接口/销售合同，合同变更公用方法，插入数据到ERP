@@ -1,0 +1,10 @@
+Url：/api/syncErp/saleContractDetail/{serinalNum}/{wfState}
+请求方式：GET
+参数说明：
+参数格式：/api/syncErp/saleContractDetail/XSHT1912300001/(active或者completed)
+返回数据格式：
+{
+  "errorCode": "0",
+  "errorMsg": "SUCCESS",
+  "data": null
+}

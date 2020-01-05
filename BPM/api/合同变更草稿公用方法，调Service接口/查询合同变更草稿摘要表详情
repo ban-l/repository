@@ -1,0 +1,33 @@
+Url：/api/contractChange/abstract/draftDetail/{id}
+请求方式：GET
+参数说明：
+参数格式：/api/contractChange/abstract/draftDetail/1
+返回数据格式：
+{
+  "errorCode": "0",
+  "errorMsg": "success",
+  "data": {
+    "id": 14634,
+    "contractId": 8668,
+    "serialNum": null,
+    "contractAbstract": "",
+    "intellectualProperty": "",
+    "acceptCondition": "",
+    "breachClause": "",
+    "penaltyCondition": "",
+    "litigationLand": "",
+    "warrantyPeriod": 0,
+    "description": "请尽快盖章邮件，以便客户尽快附件后项目启动。谢谢",
+    "recipientName": "刘杰",
+    "recipientTel": "18796245430",
+    "recipientAddr": "",
+    "wfState": null,
+    "extra": "",
+    "dataState": "-2",
+    "oldData": null,
+    "createdBy": "11805",
+    "createdDate": "2017-12-07 13:52:09",
+    "lastModifiedBy": "11805",
+    "lastModifiedDate": "2017-12-07 13:52:09"
+  }
+}

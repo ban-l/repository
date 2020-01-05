@@ -1,0 +1,57 @@
+Url：/api/project/saleContract?pspc=xx
+请求方式：GET
+参数说明：pspc=project_code;
+参数格式：?xxx=xx
+返回数据格式：
+{
+	"data": {
+		"contractEntity": "广州赛意信息科技股份有限公司",
+		"isShExternal": false,
+		"implBuQuote": 268950.00,
+		"id": 100,
+		"implInvoiceTaxRate": "6%",
+		"implDevAmount": 268950.00,
+		"serialNum": "PLANCONTRACT1905247",
+		"orgName": "40华南销售三部",
+		"customerContactEmail": "chenlan@liby.com.cn",
+		"customerManager": "明艳",
+		"saleCategory": "实施/外包开发",
+		"saleArea": "40华南销售三部",
+		"dataState": "1",
+		"predictDistTotalAmount": 0.00,
+		"preSalePoName": "立白集团大前端人才中心二期建设项目",
+		"customerName": "广州立白企业集团有限公司",
+		"predictDistGp": 0.0000,
+		"oldData": "1",
+		"maintenancePeriod": 12,
+		"distAmount": 0.00,
+		"contractBackDate": "2019-07-15",
+		"customerCode": "3W200825",
+		"preSalePoCode": "01SD19050080",
+		"customerContactTel": "13632316766",
+		"contractTotalAmount": 268950.00,
+		"zhName": "明艳",
+		"customerContact": "陈兰",
+		"wfState": "completed",
+		"contractName": "立白集团大前端人才中心二期建设项目",
+		"currency": "人民币",
+		"contractAbstract": "人才中心二期建设项目，需求外包，按项目的模式结算。",
+		"preSaleOwner": "李砚",
+		"productType": "技术外包-非深圳",
+		"lastModifiedDate": "2019-05-31T11:40:26",
+		"lastModifiedBy": "1940",
+		"standardPersonUnitPrice": 1174.00,
+		"customerManagerId": "1940",
+		"userId": 1940,
+		"deliveryOrgName": "40综合交付一部",
+		"predictHardSoftGp": 0.0000,
+		"createdDate": "2019-05-31T11:40:26",
+		"customerBillAddr": "广州市荔湾区陆居路二号",
+		"createdBy": "1940",
+		"bidNum": "TBBJSQ1905126",
+		"contractTotalDay": 229.00
+	},
+	"fromEntity": "YHT",
+	"errorCode": "0",
+	"errorMsg": "COMPELETED"
+}

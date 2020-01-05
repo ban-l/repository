@@ -1,0 +1,34 @@
+Url：/api/saleContract/payback/draftDetail/{id}
+请求方式：GET
+参数说明：
+参数格式：saleContract/payback/draftDetail/1
+返回数据格式：
+{
+  "errorCode": "0",
+  "errorMsg": "success",
+  "data": [
+    {
+      "id": 15193,
+      "contractId": 8665,
+      "serialNum": null,
+      "pbOrder": 0,
+      "saleCategory": "实施/外包开发",
+      "pbPhase": "1首期款",
+      "pbCondition": "合同签署日起10工作日内支付30%",
+      "pbDay": 0.00,
+      "pbRatio": "30",
+      "predictDate": "2017-07-10",
+      "predictAmount": 765000.00,
+      "remark": "",
+      "wfState": null,
+      "extra": "",
+      "dataState": "-2",
+      "oldData": null,
+      "createdBy": "4349",
+      "createdDate": "2018-11-28 14:13:29",
+      "lastModifiedBy": "4349",
+      "lastModifiedDate": "2018-11-28 14:13:29"
+    },
+	......
+  ]
+}

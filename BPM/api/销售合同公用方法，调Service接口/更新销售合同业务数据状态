@@ -1,0 +1,10 @@
+Url：/api/saleContract/update/wfstate/{serinalNum}/{state}
+请求方式：POST
+参数说明：/api/saleContract/update/wfstate/xxx/xxx
+参数格式：JSON
+返回数据格式：
+{
+  "errorCode": "0",
+  "errorMsg": "SUCCESS",
+  "data": null
+}

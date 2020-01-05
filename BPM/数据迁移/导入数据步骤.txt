@@ -1,0 +1,4 @@
+1.销售合同直接导入，合同变更修改‘是’，‘否’，为1，0；修改审批意见表的盖章日期
+2.修改wf_state，data_state，old_data，'人民币元'，审批意见，附件信息的data_state
+3.到处insert语句，不要id
+4.关联sql

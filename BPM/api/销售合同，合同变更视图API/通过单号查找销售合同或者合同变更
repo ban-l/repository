@@ -1,0 +1,49 @@
+Url：/api/saleContract/contractDetail?serialNum=xx
+请求方式：GET
+参数说明：serialNum=serial_num;
+参数格式：?xxx=xx
+返回数据格式：
+{
+	"data": {
+		"litigationLand": "",
+		"recipientName": "曹刚",
+		"id": 12574,
+		"recipientTel": "020-39908145",
+		"serialNum": "RYJXSHT1709091",
+		"saleCategory": "软件",
+		"penaltyCondition": "",
+		"customerName": "日立电梯（中国）有限公司",
+		"customerCode": "3O200067",
+		"preSalePoCode": "01GZ17050130",
+		"stampDate": "2017-05-15 00:00:00",
+		"userId": 10046,
+		"createdDate": "2017-09-18 17:10:49",
+		"riskPersonType": "无",
+		"isShExternal": false,
+		"intellectualProperty": "",
+		"customerManager": "胡业丰",
+		"dataState": "1",
+		"preSalePoName": "Oracle软件采购合同-BI",
+		"oldData": "1",
+		"description": "5月的订单，补流程。附件为用户盖章合同扫描件，双方盖章的合同已在当月交销售管理部。",
+		"isBackToBack": false,
+		"isLock": false,
+		"contractTotalAmount": 1577512,
+		"warrantyPeriod": 0,
+		"zhName": "胡业丰",
+		"extra": "",
+		"wfState": "completed",
+		"contractName": "Oracle软件采购合同-BI",
+		"contractAbstract": "",
+		"lastModifiedDate": "2017-09-18 17:10:49",
+		"lastModifiedBy": "10046",
+		"acceptCondition": "",
+		"deliveryOrgName": "30华南区域",
+		"breachClause": "",
+		"createdBy": "10046",
+		"contractId": 8585,
+		"recipientAddr": ""
+	},
+	"formEntity": "XSHT",
+	"errorCode": "0"
+}

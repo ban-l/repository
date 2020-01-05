@@ -1,0 +1,25 @@
+Url：/api/saleContract/save/opinion
+请求方式：POST
+参数说明：
+{
+    "serialNum": "XSHT1911070007",
+    "pbConditionDeviation": "否",
+    "warrantyDeviation": "否",
+    "intellectualDeviation": "否",
+    "breachDeviation": "否",
+    "penaltyDeviation": "否",
+    "litigationDeviation": "否",
+    "riskPersonType": "风险金额",
+    "riskPersonValue": "520000",
+    "accountProjectGp": "30%~35%（合格）",
+    "accountSupDescription": "32%",
+    "stampDate":"2019-11-30 00:00:00"
+	......
+}
+参数格式：JSON
+返回数据格式：
+{
+  "errorCode": "0",
+  "errorMsg": "SUCCESS",
+  "data": null
+}
