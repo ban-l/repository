@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gb2312"/>
+    <title>boxShadow and textShadow</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            border: 2px solid #000;
+            width: 280px;
+            text-align: center;
+            font-size: 120px;
+            margin: 20px;
+            float: left;
+        }
+
+        #div1 {
+            box-shadow: 2px 2px 3px 1px rgba(2, 345, 32, 525);
+        }
+
+        #div2 {
+            text-shadow: #0000FF 3px 1px 2px;
+        }
+
+        #div3 {
+            box-shadow: 2px 2px 3px 1px rgba(255, 0, 0, 1), -2px -2px 3px 1px rgba(0, 255, 0, 1);
+        }
+
+        #div4 {
+            box-shadow: 2px 2px 3px 1px rgba(255, 0, 0, 1) inset, -2px -2px 3px 1px rgba(0, 255, 0, 1);
+        }
+
+        #div5 {
+            text-shadow: #FF0000 3px 1px 2px, #FFFF00 -3px -1px 2px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="div1">CSS</div>
+<div id="div2">CSS</div>
+<div id="div3">CSS</div>
+<div id="div4">CSS</div>
+<div id="div5">CSS</div>
+</body>
+</html>

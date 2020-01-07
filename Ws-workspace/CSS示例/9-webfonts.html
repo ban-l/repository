@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gb2312"/>
+    <title>webfonts</title>
+    <style>
+        @font-face {
+            font-family: "Buffet";
+            src: url("Buffet.eot");/* IE6 7 8*/
+            src: local("Buffet"), url("Buffet.ttf") format("truetype"), url("Buffet.svg") format("svg");/* 其它浏览器，覆盖上一句。IE6 7 8不会识别local这句，因此该句不生效。local表示本地字体名称，如果本地本来就有了，就不下载了 */
+            /*在线转换字体，由ttf转oet等等 http://www.fontsquirrel.com/  */
+        }
+
+        #div1 {
+            text-align: center;
+            font-size: 60px;
+            font-family: "Buffet";
+        }
+    </style>
+</head>
+
+<body>
+<div id="div1">CSS3 Demo Freyr Zhang</div>
+</body>
+</html>

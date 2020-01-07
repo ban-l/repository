@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gb2312"/>
+    <title>background gradients</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            border: 2px solid #000;
+            width: 300px;
+            height: 200px;
+            margin: 20px;
+            float: left;
+        }
+
+        #div1 {
+            background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 0, 0, 1)), to(rgba(255, 255, 0, 1)));
+            /* 0 0左上角，0 100%左下角，两个点之间的连线进行渐变，若0 0,0 50%，则只渐变到中间，可以用关键字，例如left top,left bottom */
+            /* http://westciv.com/tools/gradients/index.html */
+            background: -moz-linear-gradient(top, rgba(255, 0, 0, 1), rgba(255, 255, 0, 1));
+            /* FF的，第一个值，top为从上到下，其实是0 0 -90deg，详见 https://developer.mozilla.org/en/CSS/-moz-linear-gradient */
+            filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#FFFF0000", endColorStr="#FFFFFF00", gradientType="0");
+            /* IE的，progid:DX...不能有空格；"#FFFF0000"，前两位是透明度，FF表示不透明，后6位是颜色；gradientType就0和1两个值，0为竖直，1为水平 */
+        }
+
+        #div2 {
+            background: -webkit-gradient(linear, left top, right top, from(rgba(255, 0, 0, 1)), color-stop(33%, #FFFF00), color-stop(66%, #0000FF), to(rgba(0, 255, 0, 1)));
+            background: -moz-linear-gradient(left, rgba(255, 0, 0, 1), #FFFF00 33%, #0000FF 66%, rgba(255, 255, 0, 1));
+        }
+
+        #div3 {
+            background: -webkit-gradient(radial, 100 80, 50, 120 100, 120, from(rgba(0, 0, 0, 1)), to(rgba(255, 255, 0, 1)));
+            /* 100 80为第一个圆的圆心，50为半径；120 100为圆心，120为半径；这两个圆之间的渐变 */
+            background: -moz-radial-gradient(100px 80px, closest-corner, rgba(0, 0, 0, 1), rgba(255, 255, 0, 1));
+            /* FF的，详见 https://developer.mozilla.org/en/CSS/-moz-radial-gradient ，实例：https://developer.mozilla.org/en/using_gradients */
+        }
+    </style>
+</head>
+
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+</body>
+</html>

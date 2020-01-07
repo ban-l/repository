@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Testing</title>
+    <style>
+        /*
+        p:nth-of-type(2){
+        color:red;}
+
+        p:nth-of-type(3n+1){
+        color:pink;}
+
+        body> p:nth-of-type(odd){
+        color:blue;}
+
+        div p:nth-of-type(2n+3){
+        color:#FFFF00;
+        }
+        */
+        div :not(p) {
+            color: #FF00FF;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<div id="d1">
+    DIV 1
+
+    <div id="d11">DIV 11</div>
+    <div id="d12">DIV 12</div>
+    <div id="d13">DIV 13</div>
+</div>
+
+<p>Body first paragraph.</p>
+<p>Body second paragraph.</p>
+<p>Body third paragraph.</p>
+
+<div>
+    <h1>This is a heading</h1>
+    <p>The first paragraph.</p>
+    <p>The second paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The fourth paragraph.</p>
+    <p>The fifth paragraph.</p>
+    <div>
+
+    </div>
+</div>
+</body>
+
+</html> 

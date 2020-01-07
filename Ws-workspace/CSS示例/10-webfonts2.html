@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>webfonts</title>
+    <style>
+        body {
+            font-family: "Arial", "隶书";
+        }
+
+        @font-face {
+            font-family: isaac;
+            src: url('isaac.ttf');
+        }
+
+        div {
+            font-size: 60px;
+        }
+
+        span {
+            font-size: 18px;
+        }
+
+        #isaac {
+            font-family: "isaac";
+        }
+    </style>
+</head>
+
+<body>
+<div id="isaac">新闻 竹子字体 体育 娱乐 <span>新闻 体育 娱乐 竹子</span></div>
+<div> 新闻 普通字体 体育 娱乐 <span>新闻 体育 娱乐 普通</span></div>
+</body>
+</html>
