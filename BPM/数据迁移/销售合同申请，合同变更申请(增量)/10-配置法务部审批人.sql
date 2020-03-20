@@ -1,1 +1,0 @@
-INSERT INTO `siebpmcli`.`sie_process_role_config_t`(`process_type`, `process_role`, `remark`, `user_id`, `zh_name`, `extra`, `data_state`, `create_by`, `create_date`, `last_modified_by`, `last_modified_date`) VALUES ('XSHT', 'legalDutyApprover', '法务部负责人', 6598, '柳子恒', '', '1', '1', '2019-08-28 00:00:00', '1', '2019-10-11 00:00:00');

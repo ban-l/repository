@@ -1,2 +1,0 @@
-UPDATE sie_sale_contract_opinion_t t  set t.risk_person_value = CONCAT(t.risk_person_value,'%') where t.data_state = '1' and  t.risk_person_type = '风险比例（%）' and  RIGHT(t.risk_person_value,1) != '%';
-UPDATE sie_contract_change_opinion_t t  set t.risk_person_value = CONCAT(t.risk_person_value,'%') where t.data_state = '1' and  t.risk_person_type = '风险比例（%）' and  RIGHT(t.risk_person_value,1) != '%';
